@@ -435,6 +435,7 @@ class Request
             case 'image' :
                 return $subtype == 'gif' ? 'tweet_gif' : 'tweet_image';
             case 'video' :
+            case 'application' : // Videos can sometimes be detected as application/octet-stream
                 return 'tweet_video';
                 break;
         }
